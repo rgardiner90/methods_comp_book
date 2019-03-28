@@ -1,0 +1,100 @@
+# Hypothesis Testing
+
+
+To understand this problem, we first have to understand the nature of political science.  Most questions in political science are not deterministic and are thus probabilistic.  Probabilistic relationships thus lead to tests that look at the likelihood of something.  In each case, we are trying to identify relationships (mostly causal relationships) when these relationships are not perfect (unlike the combining two elements to create chemical compound).  Instead, we are primarily look at relationships that involve human nature, and are thus not certain.
+
+A few requirements are needed for causality in the simple example of x causing y.  First, x and y must be related (correlation between the two).  X must occur before y.  
+
+Experiments are a prized way of determining causality given that x can be manipulated and it can be clearly established as to whether x appeared before y.  If random assignment is achieved, you are much better able to rule out a spurious relationship than in using observational data.  It should be noted that this method still have problems (external validity concerns, and pre-emption (killing the man in the desert by poking a hole in the bottle, but the water is also poisoned.  So the poison person incorrectly thinks that she has killed him).
+
+However, much of the work done by political scientists involves downloading observational datasets.  This is where CIs, P-values, and tests of significance become increasingly important.  One of the first problems is that it is impossible to really rule out any spurious relationship given that you cannot manipulate the treatment variables nor have random assignment.
+
+
+
+## Background behind Classical Null Hypothesis Testing
+
+Johnson 1999 (and Gill 1999): 4 basic steps to classical null hypothesis testing.
+
+- Develop a null hypothesis (generally the opposite of the research hypothesis and one that the author rarely believes to be true).
+- Data are collected (sometimes this occurs before the first step).
+- A statistical test is generated along with a P-value.  These test statistics are generally $\bar{x}, \chi^2, t$ (Gill 1999)
+- A determination of the P-value in regard to the null hypothesis is determined and interpretations are made.
+
+
+The modern day null hypothesis significance testing is actually a synthesis of Fisher's test of significance and Neyman-Pearson hypothesis testing (in what has been called ``Anything but Bayesian Analysis'' (Schrody 2014).  These two have some incompatible features that were forced together.  Newman-Pearson argued for an a priori significance level, whereas Fisher argued that it be done after the data and should be a function of the data (Gill 1999).
+
+Remember, we can only reject (never prove) a null hypothesis.  Be careful not to fail to reject the null when one has a small sample size (Johnson 1999).
+
+Additionally, when we are looking at relationships we should consider the substantive significance.  Is a variable statistically significant, but has a very tiny substantive impact?  If so, it may just mean that we have a very large sample.  This is actually problematic in the larger political science.  Some fields have small-n problems (comparative) while others can have large samples (ANES), which may produce publication bias against those with small-n (Gill 1999).
+
+
+## Desk-drawer bias
+
+Sterling et al 1995 talks about this.  They argue that the desire of journals to publish only significant findings distort the reality of treatment effects.  By only looking at studies that have significant findings created a biased sample of all studies because there are a large proportion truly out there that have insignificant findings.  This is exacerbated by meta analysis of published articles.  The potential problems were highlighted by recent efforts by psychologists to replicate 100 studies in the three leading psychology journals.  They found that more than 60 of these studies did not hold up when replicated.  
+
+Part of the problem is a fundamental misunderstanding about hypothesis testing in the social sciences.
+
+One potential idea is to review the study (introduction, theory, data and methods) before the results are reported.  Thus, the theory and importance are what matters, not the actual results (Sterling et al 1995).
+
+
+
+## Problems of classical null hypothesis testing
+
+
+- Johnson 1999 (page 764): ``In reality, P is the Pr[observed or more extreme data$ | H_o$], the probability of the observed data or more extreme data, given that the null is true, the assumed model is correct, and the sampling was done randomly.''
+    - Remember that one assumption when calculating P is that the null hypothesis is true.  That is almost never the belief of the researcher when conducting the test.  It begs the question, how meaningful is a p-value when we do not really believe $H_o$?  Additionally, the assumptions/criteria of the null hypothesis are completely unrealistic (Schrodt 2014).
+    - Gelman ea 1995: the choice between the null and research hypothesis is an artificial dichotomy (Gill 1999 also says this).
+
+- ``Using fixed $\alpha$ level say $\alpha = 0.05$ promotes the seemingly nonsensical distinction between a significant finding if P = 0.049, and nonsignificant finding if P = 0.051'' (Johnson 1999, 765).
+    - Sterling et al 1995 ``It is interesting that we did not find any authors who expressly pointed out that they had reject Ho for their major hypotheses when obtained significance was larger than but still close enough to the conventional .05 (e.g., .07 or .08).'' -110
+    - Another problem with the tyranny of 0.05 is that sometimes authors feel tempted to write ``N.S.'' instead of reporting values.  ``To delete and refuse to interpret a coefficient which is 0.01 or 0.001 above the significance level makes little sense.  Even if the author has a reason for it, at least readers could be permitted to come to their own conclusions.'' (King 1986)
+    - Fisher (1955), arguably the father of classical null hypothesis testing, argued that the threshold for significance should be determined in context of the problem.
+    - Personal note: a good example would be two exactly same studies with the same coefficient, but one having a sample of 50 and one of 500.  Should they both be evaluated at .05?  The answer is almost certainly no given that the standard error is influenced by the sample size.  Thus, why does it make sense for the researcher to decide (potentially arbitrarily) that both should be examined at the same level?  If the reader is not given the ability to figure out the probability of Type I (rejected a true null hypothesis) and Type II error (accepting a false null hypothesis) (at least easily), then they have no idea if the test with an n of 50 is .06 and thus should maybe be considered statistically significant. (BACKED UP BY JOHNSON 1999).
+    - One likely reason for 0.05, 0.01, and 0.001 is that we have been doing it and are told that is how we are supposed to do it.  But these put forth the arbitrary cut off where 0.051 is not significant but 0.049 is.  That assumes no measurement error, which is a bit ridiculous in political science (Gill 1999).
+    - By having a commonly accepted bar, we are opening the discipline up to p-hacking (Simmons, Nelson, and Simonsohn 2011), which occurs when a researcher does a variety of different variations of the model and only reports the best results from that data.  This is commonly looked down upon by the profession.
+        - Gelman and Loken (2014) refer to a similar problem that is not worried about, but can have similar problems.  They refer to a problem called the "Garden of Forking Paths" (in reference to the short story) where a researcher has a seemingly infinite number of choices (and thus paths) for picking, cleaning, and analyzing data.  "The mistake is in shining that, if the particular path that was chosen yields statistical significance, this is strong evidence in favor of the hypothesis."" -464.  
+        - The Garden of Forking Paths is especially troublesome when you have small sample sizes, small effect, large measurement error, and high variation.  
+        - These decisions include: data exclusion, coding, ideas about analysis, deciding how to formulate a hypothesis, and so on (similar to the critique in Howson and Urbach (1993).
+- Gill 1999: Most people incorrectly interpret that "the null hypothesis significance test produces $P(H_o|D)$: the probability of Ho being true given the observed data D.  But the null hypothesis test first posits Ho as true then asks what is the probability of observing these or more extreme data.  This is clearly $P(D|H_o)$." -656. If you really wanted the first way, you should be doing Bayesian stats.
+    - Gelman and Stern 2012: point out that they share many of the same concerns that other authors do (arbitrariness and so forth), but they are pointing out another flaw.  This mistake is the error of comparing "two or more results by comparing their degree of statistical significance.""  -328.  
+
+
+
+
+### Why do we still continue to do this?
+
+Nester 1996:
+
+- Appearance of objectivity and exactness
+- Readily available in statistics packages
+- Everyone uses them already
+- We are taught to use them
+- Many of the academic elites demand it. 
+
+### Alternatives
+
+Johnson 1999:
+
+- Estimates and CIs: A CI is much more telling than a p-value given that it gives an estimate of the effect size and a measure of uncertainty (though this can still fall victim to the arbitrary $\alpha$).
+- Just report the P-value (which was recommended by Fisher in the first place (Huberty 1993)).  You could similarly report the parameter estimate with the standard error (though ti requires more out of the reader).  
+- Bayesian analysis: intuitively makes more sense than frequentist statistics version of hypothesis testing (and has the added benefit of credible intervals (its version of confidence intervals) which makes a lot more sense).
+    - as Nester (1996) points out, we like 0.05 because it seems like we are being objective.  This is one reason why people are afraid of bayesian stats (because of the a priori distribution assumption); however, Howson and Urbach (1993) point out that frequentist statistics makes a number of subjective decisions.  For instance we have: choice of admissible hypothesis, selected $\alpha$, adequate sample size, adequacy of test statistic.
+- Specifically for the "Garden of Forking Paths" dilemma, one suggestion is to do preregistration when possible.  If that is not possible they have two suggestions: be aware of the choices involved in the data analysis (and make them public, see KKV 1994), second it is best to "move toward an analysis of all the data rather than a focus on a single comparison or small set of comparisons." (Gelman and Loken 2014, 465).  However, Anderson (2013) points out the limitations of preregistration mainly for studies with historical data (which is already out in the world and could be collected and analyzed well before preregistration occurs).
+- Leamer Bounds (Leamer 1983): Proposes reporting extreme bounds of intervals in developmental models leading up to the final model.
+
+
+## Other Topics/Resources
+
+
+- The Look-elsewhere effect: a phenomenon where an apparently statistically significant observations may have actually arisen by chance because of the shear size of the parameter space that is searched.  The more inferences that are made, the more likely that an erroneous inference is likely to occur.  One possible way to get over this is to have a stricter significance threshold for individual comparisons.  Another possible solution is to utilize the \href{https://www.stat.berkeley.edu/~mgoldman/Section0402.pdf}{Bonferonni correction}.  Another great example is the [Joke Study](https://www.semanticscholar.org/paper/Testing-multiple-statistical-hypotheses-resulted-in-Austin-Mamdani/d00a678b0d09eaef4902c778821c52dc5ac53e58) that shows the connection between astrological signs and health.
+
+
+## Appendix
+
+Leamer (1983) points out that ``random'' ``does not mean adequately mixed in \underline{every} sample.  It only means that on the average the fertilizer treatments are adequately mixed.  Randomization implies that the least-squares estimator is `unbiased,' but that definitely doe snot mean that for each sample the estimate is correct.  Sometimes the estimate is too high, sometimes too low.'' -2
+
+
+
+
+
+

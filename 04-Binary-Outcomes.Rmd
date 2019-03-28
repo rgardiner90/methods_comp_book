@@ -1,0 +1,54 @@
+# Dichotomous (Binary Outcome)
+
+
+Using any linear model (like OLS or ANOVA) for a dichotomous dependent variable can do the following: create predicted probabilities greater than one and less than 0, heteroskedasticity, inefficient estimates, biased standard errors, and useless test statistics (King 1986).
+
+These models should only be chosen then the dependent variable is dichotomous (norm is to code it as 0 and 1).  These are considered part of the discrete choice methods because political agents make choices from finite set of distinct options (other discrete choice models include ordinal data) ``which assumes that the political agent's choice is determined by some continuous underlying rating of a political item or propensity to engage in some behavior known as a \textit{latent variable}.  We do not observe this latent variable; instead we observe some discrete choice categories related to the latent variable [shown as $y^*$]... For instance, a country might have an underlying propensity to fight with its neighbors, but we only observe two discrete choice categories - war or peace.'' (Glasgow and Alvarez 2010).
+
+## Background
+
+
+The decision between a probit and logit model are about assumptions about the error.  A probit model assumes normal errors while a logistic errors (though both errors are symmetric, the logistic is more spread out).  As with other models, we still assume that $E(\epsilon | x) = 0$.  A logic distribution of the errors has a mean of 0 and a variance of $\pi^2/3$ (Long 1997; Gujarati 1995).  It used to be that profit was more difficult to calculate which made earlier researchers focus on logic models.  Additionally, logic coefficients are approximately 1.7 times higher than profit coefficients.
+
+Generally these equations are written as: $Pr(Cert = 1) = \beta_0 \beta_1X_1 + \epsilon$ (MLE requires calculating join probabilities (likelihood of observations the entire dataset), rather than the probability of observing a single observation (I think that is why we don't do $x_i$ and all of that).
+
+## Assumptions
+
+- The threshold is 0: $\tau = 0$
+- The conditional mean of $\epsilon$ is 0: $E(\epsilon | x) = 0$
+- The conditional variance of $\epsilon$ is constant: $VAR(\epsilon | x) = \pi^2/3$ for logic and $VAR(\epsilon | x) = 1$ for probit (Long 1997) 
+
+
+As $n\to\infty$ these estimators are consistent, normal, and efficient (this is what they mean when they say ``asymptotic'').  However, in smaller samples their behavior is unknown and not trustworthy. There are some general rules for these models including: never less than 100, though over 500 is adequate.  One rule is to have 10 observations for every parameter (with a minimum of 100), but that does not take into account collinearity and other undesirable properties (Long 1997)
+
+You need to have approximately the same number of 0s and 1s in the data.  It starts to break down when the balance gets worse than 60/40 (then use Scobit) and should use Rare Events Logit when it gets to around 90/10 (when logit/probit becomes worthless) (King and Zeng 2001).
+
+### Comparison to OLS
+
+Small measurement error, which would do very little in CLRMs, can influence all estimated coefficients (Hausman 2001).
+
+The violation of assumptions like omitted variable bias is rather different in effecting MLEs than in OLS (Hug 2009).
+
+``It is problematic to apply least-squares linear regression to a dichotomous response variable: the errors cannot be normally distributed and cannot have constant variance.  Even more fundamentally, the linear specification does not confine the probability for the response to the unit interval.'' (Fox 2008).
+
+## Interpretation
+
+Since binary response models (BRM) are not linear, we need some additional help in interpretation of the results, which means that the effect in a one-unit change in one independent variable on the choice probabilities will depend on the values of the other independent variables (otherwise we can only tell directionality and significance and that doesn't include the difficulty with interaction terms) (Long 1997; Glasgow and Alvarez 2010).
+
+When deciding what value to choose for predicted probabilities (the most direct approach, see King ea 2000), it is most common to set most variables at their mean (unless the date are highly skewed than median might work better) and to set dummy variables at their modal value.  Additionally, if there is some substantive reason to change the values of the other independent variables, it would be nice to show that (Long 1997).  Caution against minimum/maximum predicted probabilities: These can be misleading if you have some outlier value that is not representative of the model (Long 1997).  
+
+Logit models can do Odds Ratio as well (though it is less common) (Long 1997; Kennedy 2008).
+
+### Proportional Reduction of Error
+
+The PRE statistic calculates the proportion of positive assignments to the proportion of negative to determine the predictive accuracy: $PRE = (\% correctly predicted - \% modal category)/(100 - \% in modal category)$
+
+
+
+## Random
+
+$R^2$ should not be used in estimation of dichotomous dependent variables (Kennedy 2008).  We can use Wald $\chi^2$ as a basic one.  You can also use AIC and BIC for comparison of models.
+
+
+
+
