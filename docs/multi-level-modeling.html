@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 3 Multi Level Modeling | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 3 Multi Level Modeling | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Multi Level Modeling | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie">
+
+
+<meta name="date" content="2019-03-27">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="methods.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About the Book</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html"><i class="fa fa-check"></i><b>3</b> Multi Level Modeling</a><ul>
+<li class="chapter" data-level="3.1" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html#background"><i class="fa fa-check"></i><b>3.1</b> Background</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html#how-to-deal-with-multilevel-data"><i class="fa fa-check"></i><b>3.1.1</b> How to Deal with Multilevel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html#assumptions"><i class="fa fa-check"></i><b>3.2</b> Assumptions</a></li>
+<li class="chapter" data-level="3.3" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html#estimating-multilevel-modeling"><i class="fa fa-check"></i><b>3.3</b> Estimating Multilevel Modeling</a></li>
+<li class="chapter" data-level="3.4" data-path="multi-level-modeling.html"><a href="multi-level-modeling.html#additional-considerations-for-multilevel-modeling"><i class="fa fa-check"></i><b>3.4</b> Additional Considerations for Multilevel Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="multi-level-modeling" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Multi Level Modeling</h1>
+<div id="background" class="section level2">
+<h2><span class="header-section-number">3.1</span> Background</h2>
+<p>Multilevel data most frequently contains observations that are nested within larger spatial categories or groupings (individuals within a country) (Jones 2010). Can also contain observations that are nested temporally (annual GDP) and may even be nested in larger spatial groupings, across time (individual responses within surveys within years). The beauty of multilevel modeling is that it does not lose the information that will happen when you pool the information or use techniques like fixed effects (Achen 2005).</p>
+<div id="how-to-deal-with-multilevel-data" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> How to Deal with Multilevel Data</h3>
+<p>Disaggregate group data to individual level: for example, individual data nested within states, include state level variables at individual level with same values for all individuals in a given state. PROBLEM: all unmodeled contextual information (usually macro effects) ends up in the error term. Individuals within same macro group then have correlated errors (violating OLS assumption).</p>
+<p>Pooling: when you assume there is not heterogeneity among the units (so that people in U.S. are similar to people in Canada, Mexico, New Zealand, China, and Nigeria). If you are assuming this, then you can use a garden variety regression (Jones 2010). However, this assumption will likely be incorrect (Franzese 2005). If incorrect, then you likely introduce heteroskedasticity as well as autocorrelation (this mainly occurs because respondents, <span class="math inline">\(i\)</span>, in U.S. will be more alike to each other than respondents in New Zealand (Jones 2010; Priomo ea 2007). This will lead to inefficient and inconsistent standard errors leading to invalid hypothesis testing (Jones 2010). If you are only afraid of non-spherical errors, then you can use what is commonly referred to as the ``Huber-White sandwich’’ estimator (White 1980; Jones 2010; Primo ea 2007). However, much of the information that we care about is lost if we don’t use multilevel modeling.</p>
+<p>Solutions:</p>
+<ul>
+<li>Fixed effects (not very common in political science): Essentially adding an additional dummy variable for each macro-level groupings to account for contextual variation. It is shown with the following equation: <span class="math inline">\(y_i = \beta_{j[I]} + \beta_1x_i + \epsilon_i\)</span>.where <span class="math inline">\(\beta_j\)</span> gives a different intercept for each unit. Prevents correlated error issue, but will be inefficient given that we burn a degree of freedom for every new independent variable we are adding to the model. Additionally, all covariates that are constant within <span class="math inline">\(j\)</span> cannot be estimated (Jones 2010). A variation of the fixed effect is to estimate a model for each unit and then compare the different coefficients, however the unbalanced nature of political science data commonly precludes this kind of analysis or at least makes some estimates will wide variability that has nothing to do with theory and everything to do with sample size (Jones 2010).</li>
+<li>Random effects (not very common in political science): like fixed effects, allows the estimation of different intercepts for each macro-level group. The formula for this one is <span class="math inline">\(y_i = \beta_{j[I]} + \epsilon_i\)</span>. The difference between fixed and random effects is the way <span class="math inline">\(\beta_{j[I]}\)</span> is treated. Under fixed effects, the unit effects are unknown constants that are estimated from the data (Faraway 2006). This approach treats it as a random coefficient by assuming these intercepts are randomly drawn for a given (usually normal) distribution (Gelman and Hill 2007). However, estimates may be biased.</li>
+<li>Clustering (much more common but kind of like a band-aid): essentially a statistical ``fix’’ of the problem by allowing a compound error term that accounts for the macro-level information. It is a variation of the Huber-White robust standard error. Cluster-adjustment works well for procedures including logit and probit assuming that the number of clusters is large enough. Simulations have shown that 50 clusters are more than sufficient (Kezdi 2003).</li>
+<li>Multilevel Modeling (probably theoretically better, but not necessarily methodologically): Also known as Hierarchical Linear Modeling or Mixed Effects Modeling. Commonly used in education research (students within classes, within schools, within school districts, etc). Goal is to predict influences on a dependent variable using independent variables from several contexts (individual and macro). I think the equation looks like this: <span class="math inline">\(y_i = \beta_0 + \beta_1x_i + \beta_2z_j + \epsilon_i\)</span> where the <span class="math inline">\(x\)</span> is the level 1 data and <span class="math inline">\(z\)</span> is the level 2 data.</li>
+</ul>
+</div>
+</div>
+<div id="assumptions" class="section level2">
+<h2><span class="header-section-number">3.2</span> Assumptions</h2>
+<p>Not so much an assumption, but you should have a lot more observations in the first stage than in the second stage (Achen 2005). However, having a small number of observations at the second level, we open ourselves up to bias and incorrect hypothesis testing (if the distributional assumptions are off (Bowers and Drake 2005)). Bowers and Drake (2005) suggest using graphs of the differences between second level groups to check assumptions. Additionally, hierarchical models are delicate meaning that specification error in the first stage will lead to biases and inconsistencies at the second stage, even if the second stage is properly handled (Achen 2005).</p>
+</div>
+<div id="estimating-multilevel-modeling" class="section level2">
+<h2><span class="header-section-number">3.3</span> Estimating Multilevel Modeling</h2>
+<p>For multilevel modeling:</p>
+<p>Level 1: <span class="math inline">\(y_{ij} = \alpha_{j[i]} + \beta x_i + \epsilon_i\)</span></p>
+<p>Level 2: <span class="math inline">\(\alpha_j ~ N(\mu_\alpha,\sigma^2_\alpha)\)</span> or <span class="math inline">\(\alpha_j = \gamma_0 + \gamma_1u_j + \eta_j\)</span></p>
+<p>Where: i = individuals, j = groups</p>
+<p>Considerations for Multilevel modeling:</p>
+<ul>
+<li>How many levels are in the data? - Social science generally only has 2 or 3</li>
+<li>How many predictors for each level are needed? - Modeling becomes increasingly complex as these increase (especially for macro-level predictors). Are any cross-level interactions hypothesized? Which parts of the model will include random effects? What structural form will you use? -Varying intercepts only, varying slopes only, varying intercepts and slopes.
+<ul>
+<li>Varying intercepts: will have same slope, but cross y-axis at different places.<br />
+</li>
+<li>Varying slopes: will have same intercept, but different slopes</li>
+<li>Varying slopes and intercepts: will have both</li>
+</ul></li>
+</ul>
+<p>If you choose varying intercept and slope, you add additional layer of complexity. Level 1 stays the same, but level 2 now has to account for fact that the intercept and slope will vary.</p>
+</div>
+<div id="additional-considerations-for-multilevel-modeling" class="section level2">
+<h2><span class="header-section-number">3.4</span> Additional Considerations for Multilevel Modeling</h2>
+<p>Number of groups: Some argue that a minimum number of groups is needed for multilevel modeling. However, even with a small number of groups, a multilevel regression will simply reduce to a classical regression. Therefore, the number of groups is a limitation, only in that the estimation of between-group variation will be limited.</p>
+<p>Number of observations per group: Another issue that is brought up, but doesn’t really exist. With small numbers of observations in some groups, estimates of the <span class="math inline">\(\alpha\)</span> parameters for those groups will be imprecise. Also, if there is significant imbalance there can be issues with random effects estimates.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["methods_comp_book.pdf", "methods_comp_book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
