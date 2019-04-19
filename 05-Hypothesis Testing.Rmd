@@ -1,4 +1,16 @@
-# Hypothesis Testing
+# Causal Inference Hypothesis Testing
+
+There are four hurdles when it comes to making/buying a causal argument
+
+1. Is the theory believable (does it pass the sniff test)?
+2. Is there a chance that y could influence x (endogeneith)?
+3. Is there a correlation in the data between x and y?
+4. Are we confident that we have controlled for all potential z variables that would make the relationship between x and y spurious? 
+
+For a more robust understanding of this, see the following articles:
+1. [Criteria for causal inference](https://la.utexas.edu/users/jmciver/350K/NOTES/Causality.PDF)
+2. [Causation and Experimental Design](https://www.sagepub.com/sites/default/files/upm-binaries/23639_Chapter_5___Causation_and_Experimental_Design.pdf)
+3. [Causal Arguments](http://faculty.uncfsu.edu/jyoung/causal_arguments.htm)
 
 
 To understand this problem, we first have to understand the nature of political science.  Most questions in political science are not deterministic and are thus probabilistic.  Probabilistic relationships thus lead to tests that look at the likelihood of something.  In each case, we are trying to identify relationships (mostly causal relationships) when these relationships are not perfect (unlike the combining two elements to create chemical compound).  Instead, we are primarily look at relationships that involve human nature, and are thus not certain.
@@ -87,6 +99,11 @@ Johnson 1999:
 
 
 - The Look-elsewhere effect: a phenomenon where an apparently statistically significant observations may have actually arisen by chance because of the shear size of the parameter space that is searched.  The more inferences that are made, the more likely that an erroneous inference is likely to occur.  One possible way to get over this is to have a stricter significance threshold for individual comparisons.  Another possible solution is to utilize the \href{https://www.stat.berkeley.edu/~mgoldman/Section0402.pdf}{Bonferonni correction}.  Another great example is the [Joke Study](https://www.semanticscholar.org/paper/Testing-multiple-statistical-hypotheses-resulted-in-Austin-Mamdani/d00a678b0d09eaef4902c778821c52dc5ac53e58) that shows the connection between astrological signs and health.
+
+- Truly isolating the causal effect is really difficult.  See these articles for examples:
+
+1. [Estimating the Payoff to Attending A More Selective College: An Application on Observables and Unobservables](https://cdn.theatlantic.com/static/mt/assets/business/dalekrueger_More_Selective_College.pdf)
+2. [Juvenile Jails](https://www.jstor.org/stable/10.1086/596039?seq=1#page_scan_tab_contents)
 
 
 ## Appendix

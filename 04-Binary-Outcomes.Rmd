@@ -1,5 +1,6 @@
 # Dichotomous (Binary Outcome)
 
+One of the main assumptions when using OLS is that our variable is continuous.  This is violated when we use a dichotomous (binary) outcome?  What is a dichotomous and binary outcome?  Captain America gives a good example in **Winter Soldier** when he says "If they are shooting at you, they are bad guys". Either someone is a "good guy" or "bad guy".
 
 Using any linear model (like OLS or ANOVA) for a dichotomous dependent variable can do the following: create predicted probabilities greater than one and less than 0, heteroskedasticity, inefficient estimates, biased standard errors, and useless test statistics (King 1986).
 
@@ -21,7 +22,7 @@ Generally these equations are written as: $Pr(Cert = 1) = \beta_0 \beta_1X_1 + \
 
 As $n\to\infty$ these estimators are consistent, normal, and efficient (this is what they mean when they say ``asymptotic'').  However, in smaller samples their behavior is unknown and not trustworthy. There are some general rules for these models including: never less than 100, though over 500 is adequate.  One rule is to have 10 observations for every parameter (with a minimum of 100), but that does not take into account collinearity and other undesirable properties (Long 1997)
 
-You need to have approximately the same number of 0s and 1s in the data.  It starts to break down when the balance gets worse than 60/40 (then use Scobit) and should use Rare Events Logit when it gets to around 90/10 (when logit/probit becomes worthless) (King and Zeng 2001).
+You need to have approximately the same number of 0s and 1s in the data.  It starts to break down when the balance gets worse than 60/40 (then use Scobit) and should use Rare Events Logit when it gets to around 90/10 (when logit/probit becomes worthless) (King and Zeng 2001; see also article on [class imbalance](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-30164-8_110)).
 
 ### Comparison to OLS
 
